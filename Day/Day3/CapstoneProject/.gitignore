@@ -1,0 +1,76 @@
+# ==========================================
+# FastAPI & Database Specifics
+# ==========================================
+# Local databases (SQLite, etc.)
+*.db
+*.sqlite3
+*.sqlite
+
+# Application logs
+logs/
+*.log
+
+# FastAPI Cloud or serverless deployment artifacts
+.fastapicloudignore
+.serverless/
+
+# ==========================================
+# Environments and Secrets
+# ==========================================
+# NEVER commit credentials or API keys to version control
+# NEVER commit credentials or API keys to version control
+.env
+.env.*
+!.env.example
+.envrc
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+ENV.bak/
+
+# ==========================================
+# Python Byte-compiled and C-extensions
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ==========================================
+# Testing and Coverage
+# ==========================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# ==========================================
+# Type Checkers and Linters
+# ==========================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
