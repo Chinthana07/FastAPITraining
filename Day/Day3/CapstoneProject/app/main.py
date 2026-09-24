@@ -2,8 +2,11 @@ from fastapi import FastAPI
 
 from app.config import settings
 from app.database import ping_database
+from app.routers import users 
 
 app = FastAPI(title=settings.APP_NAME)
+
+app.include_router(users.router)
 
 @app.on_event("startup")
 def on_startup() -> None:
@@ -14,3 +17,4 @@ def on_startup() -> None:
 @app.get("/", tags=["Health"])
 def health_check():
     return{"status":"ok", "app":settings.APP_NAME}
+
